@@ -1,0 +1,11 @@
+question_text,option_a,option_b,option_c,option_d,correct_answer,level
+What is web technology?,A collection of tools and techniques used to create and deliver content on the World Wide Web, A type of software that enables users to access and interact with information on the internet,A network of interconnected computers that share information and services, A system for storing and retrieving information on the internet,A,2
+ Which HTML tag is used to create a hyperlink?,<link>,<href>, <a>,<hyperlink>,C,1
+Which of the following is not a web component element?,<shadow>, <menu>, <content>,<element>,B,1
+Which of the following programming languages is commonly used for server-side scripting in web development?,HTML,CSS,JavaScript,PHP,D,2
+Which of the following is used to read a HTML page and render it?, Web server,Web matrix,Web browser,None of the mentioned,C,2
+ Which of the following is a popular front-end framework for building user interfaces in JavaScript?,Django,Angular,Flask,Node.js,B,3
+ What application can one create even before the introduction of HTML5?,Forms, Browser based games,Web applications,Mobile applications,A,1
+Which of the following is not associated with web socket communication?,https,wss,http,ws,C,2
+ Why are Images often used on the webpage?,To create graphical buttons or links to other pages,To help the webpage load efficiently,Webpage cannot run/be displayed without at least one image, Because webpage doesn’t support pure text,A,1
+What is DOM?, Application programming interface, Hierarchy of objects in ASP.NET, Convention for representing and interacting with objects in html documents,None of the mentioned,C,1

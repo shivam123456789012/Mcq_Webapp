@@ -1,0 +1,11 @@
+question_text,option_a,option_b,option_c,option_d,correct_answer,level
+ Is Python code compiled or interpreted?, Python code is both compiled and interpreted,Python code is neither compiled nor interpreted,Python code is only compiled,Python code is only interpreted,A,2
+ All keywords in Python are in _________,Capitalized,lower case,UPPER CASE,None of the mentioned,D,1
+Which of the following is used to define a block of code in Python language?,Indentation,Key,Brackets,All of the mentioned,A,3
+Which keyword is used for function in Python language?,Function,def,Fun,Define,B,1
+Which of the following character is used to give single-line comments in Python?,//, #, !,/*,B,2
+Which of the following functions can help us to find the version of python that we are currently working on?, sys.version(1),sys.version(0),sys.version(), sys.version,D,3
+" Python supports the creation of anonymous functions at runtime, using a construct called __________",pi,anonymous,lambda,none of the mentioned,C,3
+What is the order of precedence in python?," Exponential, Parentheses, Multiplication, Division, Addition, Subtraction","Exponential, Parentheses, Division, Multiplication, Addition, Subtraction","Parentheses, Exponential, Multiplication, Division, Subtraction, Addition","Parentheses, Exponential, Multiplication, Division, Addition, Subtraction",D,2
+ What does pip stand for python?, Pip Installs Python, Pip Installs Packages,Preferred Installer Program,All of the mentioned,C,1
+Which of the following is true for variable names in Python?,underscore and ampersand are the only two special characters allowed,unlimited length,all private members must have leading and trailing underscores, none of the mentioned,B,1
