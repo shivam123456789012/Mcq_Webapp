@@ -16,5 +16,5 @@ The objective of this project project implements a web-based MCQ (Multiple Choic
  2. Provide the candidate's email ID and upload the question file (in CSV format) on the upload page.
  3. The candidate will receive an email containing the registration form link.
  4. Complete the form using the provided link and submit it.
- 5. Proceed to the MCQtest.
+ 5. Proceed to the MCQ test.
  6. The results will be updated in a CSV file on the result page.
