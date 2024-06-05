@@ -1,0 +1,114 @@
+/* Styles for the candidate form */
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-image: linear-gradient(#380036 , #0CBABA);
+    /* background-image: url('main.jpg'); 
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    /* background-size: cover; Cover the entire background */ 
+}
+
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background color with transparency */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for container */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    color: yellow;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input:focus,
+select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+
+input::placeholder,
+select::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+
+.form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 50%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    background-image: linear-gradient(to right, #aa076b, #61045f);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30%;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    background-image: linear-gradient(to right, #61045f, #aa076b);
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* General styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
