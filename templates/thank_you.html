@@ -1,0 +1,45 @@
+<!-- thank_you.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .thank-you {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-image: linear-gradient(#380036 , #0CBABA);
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .thank-you {
+            text-align: center;
+        }
+        h1 {
+            color: yellow;
+        }
+        .thank-you p {
+            margin-top: 20px; 
+            color: white;
+        }
+        .thank-you a {
+            color: yellow;
+            text-decoration: none;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+</head>
+<body>
+    <div class="thank-you">
+    <h1>THANK YOU</h1>
+    <p>Thank you for submitting your information. We appreciate your participation.</p>
+    <p><a href="{{ url_for('mcq') }}">Proceed to MCQ</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    
+    <!-- Link to the shared CSS file for consistent styling across pages -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Additional meta tags, as needed -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        body {
+            display: flex;
+            justify-content: flex-start; /* Align items to the left */
+            align-items: flex-start; /* Align items to the top */
+            height: 100vh;
+            margin: 0;
+            padding: 20px; /* Optional: add some padding for better appearance */
+            background: linear-gradient(to bottom, #001f3f, #39CCCC);
+        }
+
+        .container {
+            text-align: left; /* Ensure text is aligned to the left */
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            margin-top: 0.10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main container for the admin dashboard -->
+    <div class="container">
+        <h1 class="header">Admin Dashboard</h1>
+
+
+        <!-- Section for viewing candidate results -->
+        <section class="results-section">
+            <h2 class="section-header">View Candidate Results</h2>
+            <form action="{{ url_for('export_results') }}" method="GET">
+                <button type="submit" class="btn btn-secondary">View Results</button>
+            </form>
+        </section>
+
+
+        <!-- Add any other admin actions here, as required -->
+    </div>
+
+    <!-- Link to the shared JavaScript file for consistent functionality across pages -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>

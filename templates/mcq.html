@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIPLE CHOICE QUESTIONS</title>
+    <script type="text/javascript">
+
+      
+        // Disable right-click context menu
+             document.addEventListener('contextmenu', function (e) {
+             e.preventDefault();
+        });
+
+        // Disable keyboard shortcuts for copying and pasting
+        document.addEventListener('keydown', function (e) {
+            // Disable Ctrl+C, Ctrl+V, Command+C, and Command+V
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'C' || e.key === 'v' || e.key === 'V')) {
+                e.preventDefault();
+            }
+        });
+
+
+let warningCount = 0;
+
+        // Function to display a warning alert
+        function displayWarning() {
+            // Display a warning message
+            alert("Attempting to change tabs/windows during the test is prohibited. Please stay on this page.");
+
+            // Increment warning count
+            warningCount++;
+
+            // Check if warning count exceeds the limit
+            if (warningCount >= 3) {
+                // If the candidate persists in attempting to change tabs/windows after 3 attempts, redirect to a closed test page
+                alert("You have exceeded the maximum number of warnings. The test will now be closed.");
+                // Redirect to a closed test page
+                window.location.href = "closed_test_page.html";
+            }
+        }
+
+        // Event listener to detect tab/window changes
+        document.addEventListener("visibilitychange", function() {
+            if (document.visibilityState === 'hidden') {
+                // If the tab/window is changed, display a warning
+                displayWarning();
+            }
+        });
+
+        // Event listener to detect browser close
+        window.addEventListener('beforeunload', function(event) {
+            // Display a warning when attempting to close the browser window
+            event.preventDefault();
+            displayWarning();
+            event.returnValue = ''; // This is necessary for Chrome
+        });
+
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(#380036 , #0CBABA);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .mcq-test {
+            text-align: center;
+        }
+        h1 {
+            text-align: top;
+            margin-bottom: 40px;
+            text-decoration: underline;
+            color: yellow;
+        }
+        .question {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        input[type="radio"] {
+            background-color: yellow;
+            border-color: yellow; 
+        }
+        input[type="radio"]:checked {
+            background-color: yellow; 
+            border-color: yellow;
+        }
+        input[type="submit"] {
+            background-image: linear-gradient(to right, #aa076b, #61045f);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 30%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mcq-test">
+    <h1>MULTIPLE CHOICE QUESTIONS</h1>
+    <div id="timer"></div>
+    <form method="POST" action="/submit_mcq" id="mcqForm">
+        {% for question in questions %}
+            <div class="question">
+                <p>Question {{ loop.index }}: {{ question.question_text }}</p>
+                <label>
+                    <input type="radio" name="question{{ question.id }}" value="A"> {{ question.option_a }}
+                </label><br>
+                <label>
+                    <input type="radio" name="question{{ question.id }}" value="B"> {{ question.option_b }}
+                </label><br>
+                <label>
+                    <input type="radio" name="question{{ question.id }}" value="C"> {{ question.option_c }}
+                </label><br>
+                <label>
+                    <input type="radio" name="question{{ question.id }}" value="D"> {{ question.option_d }}
+                </label><br>
+            </div>
+        {% endfor %}
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+
+
+    <script>
+        // Set the time limit to 30 minutes (in seconds)
+        var timeLimit = 30 * 60;
+
+        // Function to update the timer
+        function updateTimer() {
+            var minutes = Math.floor(timeLimit / 60);
+            var seconds = timeLimit % 60;
+            document.getElementById('timer').innerText = 'Time Remaining: ' + minutes + 'm ' + seconds + 's';
+            if (timeLimit <= 0) {
+                // If time is up, submit the form
+                document.getElementById('mcqForm').submit();
+            } else {
+                // Decrement time limit
+                timeLimit--;
+            }
+        }
+
+        // Call updateTimer every second
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>

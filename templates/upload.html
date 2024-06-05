@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Questions</title>
+    
+    <!-- Link to the shared CSS file for consistent styling across pages -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Additional meta tags, as needed -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items to the top */
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #001f3f, #39CCCC);
+        }
+
+        .container {
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px; /* Optional: add a bit of margin for better appearance */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .form-group input[type="file"],
+        .form-group input[type="email"] {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .btn {
+            display: block;
+            margin-top: 15px;
+        }
+
+        .instructions {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main container for the upload page -->
+    <div class="container">
+        <h1 class="header">Upload Questions</h1>
+
+        <!-- Form for uploading a PDF file -->
+        <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="pdfFile">Select CSV File:</label>
+                <input type="file" id="pdfFile" name="pdfFile" accept=".pdf" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+
+        <!-- Optional section for additional instructions or messages -->
+        <div class="instructions">
+            <p>
+                Please upload a CSV file containing questions and answers in the specified format.
+            </p>
+            <p>
+                Ensure the CSV file follows the question format guidelines to be processed correctly.
+            </p>
+        </div>
+    </div>
+
+    <!-- Link to the shared JavaScript file for consistent functionality across pages -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+
+</html>
