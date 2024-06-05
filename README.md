@@ -12,10 +12,9 @@ The objective of this project project implements a web-based MCQ (Multiple Choic
  8. SMTP:Simple mail transfer protocol
  9. URLSafeTimedSerializer: a library component which provides a way to serialize data into a URL-safe format.
 # OPERATING INSTRUCTIONS :
-● Configure email ID and password of recipient in config.cfg.
- ● Provide the candidate's email ID and upload the question file (in CSV format) on the
- upload page.
- ● Thecandidate will receive an email containing the registration form link.
- ● Completetheformusing the provided link and submit it.
- ● ProceedtotheMCQtest.
- ● Theresults will be updated in a CSV file on the result page.
+ 1. Configure email ID and password of recipient in config.cfg.
+ 2. Provide the candidate's email ID and upload the question file (in CSV format) on the upload page.
+ 3. The candidate will receive an email containing the registration form link.
+ 4. Complete the form using the provided link and submit it.
+ 5. Proceed to the MCQtest.
+ 6. The results will be updated in a CSV file on the result page.
